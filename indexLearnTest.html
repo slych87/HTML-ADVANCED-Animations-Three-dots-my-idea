@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        p {
+            position: absolute;
+            font-size: 80px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        span {
+            position: relative;
+        }
+
+        span::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            animation: hide 3s steps(3, start) infinite;
+
+        }
+
+        @keyframes hide {
+            0% {
+                left: 30%;
+            }
+
+            29% {
+                left: 30%
+            }
+
+
+            30% {
+                left: 65%;
+            }
+
+            59% {
+                left: 65%;
+            }
+
+            60% {
+                left: 100%;
+            }
+
+            90% {
+                left: 100%;
+            }
+
+            90.1% {
+                left: 0;
+            }
+
+            100% {
+                left: 0;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Napis<span>...</span>
+    </p>
+</body>
+
+</html>
